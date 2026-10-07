@@ -6,6 +6,7 @@ import {
   Search, Bell, TrendingUp, Filter, Eye, ChevronRight, User, Phone, Globe
 } from 'lucide-react';
 import { uploadToR2Storage } from '../../services/r2Storage';
+import BrandLogo from '../common/BrandLogo';
 
 export default function AdminDashboard() {
   const { 
@@ -130,9 +131,7 @@ export default function AdminDashboard() {
           
           {/* Admin Brand Badge */}
           <div className="flex items-center gap-3">
-            <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-amber-500 to-amber-400 text-slate-950 font-bold flex items-center justify-center text-sm shadow-md border border-amber-300">
-              BP
-            </div>
+            <BrandLogo size="md" variant="light" />
             <div>
               <h3 className="font-extrabold text-white text-base font-serif-heading leading-tight">BP Control Center</h3>
               <p className="text-[11px] font-bold text-emerald-400 uppercase tracking-wider mt-0.5">

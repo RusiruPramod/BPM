@@ -1,4 +1,4 @@
-import bpLogo from '../assets/branding/bp_logo.png';
+import bpLogo from '../assets/branding/bp_logo.svg';
 import touristCarNight from '../assets/gallery/tourist_car_night.jpg';
 import touristDayBackpackers from '../assets/gallery/tourist_day_backpackers.jpg';
 import touristPeaceSign from '../assets/gallery/tourist_peace_sign.jpg';

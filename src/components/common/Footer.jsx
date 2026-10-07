@@ -2,6 +2,8 @@ import React from 'react';
 import { useApp } from '../../context/AppContext';
 import { Phone, MessageCircle, Mail, MapPin, ShieldCheck, Heart, Star, ExternalLink, Globe } from 'lucide-react';
 
+import BrandLogo from './BrandLogo';
+
 export default function Footer() {
   const { branding, setActiveTab, setAdminAuthModal } = useApp();
 
@@ -19,9 +21,7 @@ export default function Footer() {
           {/* Brand Info */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="p-1 rounded-xl bg-white border border-amber-200 shrink-0">
-                <img src={branding.logoUrl} alt="BP Tours and Travels" className="h-10 w-auto object-contain rounded-lg" />
-              </div>
+              <BrandLogo size="md" variant="light" />
               <div>
                 <h3 className="font-bold text-white text-lg font-serif-heading">BP Tours and Travels</h3>
                 <p className="text-[11px] font-bold text-amber-500 uppercase tracking-wider">Bandara Premathilaka</p>
@@ -48,7 +48,7 @@ export default function Footer() {
                     onClick={() => scrollToSection(link)}
                     className="text-slate-400 hover:text-emerald-400 capitalize transition-colors"
                   >
-                    • {link === 'vehicles' ? 'Vehicle Hire and Airport Drop' : link}
+                    • {link === 'vehicles' ? 'Vehicles' : link === 'tours' ? 'Tours' : link}
                   </button>
                 </li>
               ))}

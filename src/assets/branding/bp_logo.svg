@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient: Deep Luxury Navy to Emerald -->
+    <linearGradient id="bpBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#022c22" />
+      <stop offset="50%" stop-color="#064e3b" />
+      <stop offset="100%" stop-color="#042f2e" />
+    </linearGradient>
+
+    <!-- Gold Accent Gradient -->
+    <linearGradient id="bpGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde047" />
+      <stop offset="45%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+
+    <!-- Emerald Glow Gradient -->
+    <linearGradient id="bpEmeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6ee7b7" />
+      <stop offset="50%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+
+    <!-- Shadow filter -->
+    <filter id="bpDropShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- Outer Rounded Squircle Badge -->
+  <rect 
+    x="5" 
+    y="5" 
+    width="110" 
+    height="110" 
+    rx="28" 
+    fill="url(#bpBgGrad)" 
+    stroke="url(#bpGoldGrad)" 
+    stroke-width="2.5" 
+    filter="url(#bpDropShadow)"
+  />
+
+  <!-- Subtle Inner Travel Compass Ring -->
+  <circle 
+    cx="60" 
+    cy="60" 
+    r="48" 
+    fill="none" 
+    stroke="#ffffff" 
+    stroke-opacity="0.1" 
+    stroke-width="1.2" 
+    stroke-dasharray="4 3" 
+  />
+
+  <!-- Ceylon Golden Sun Arc (Dawn of Sri Lanka) -->
+  <g transform="translate(60, 26)">
+    <!-- Sun disk -->
+    <circle cx="0" cy="0" r="10" fill="url(#bpGoldGrad)" />
+    <!-- Sun rays -->
+    <path d="M 0 -15 L 0 -11 M -11 -11 L -8 -8 M 11 -11 L 8 -8 M -15 0 L -11 0 M 15 0 L 11 0" 
+          stroke="url(#bpGoldGrad)" stroke-width="1.8" stroke-linecap="round" />
+    <!-- 4-point North Star Accent -->
+    <path d="M 0 -18 L 1.5 -13 L 6 -13 L 2 -10 L 3.5 -5 L 0 -8 L -3.5 -5 L -2 -10 L -6 -13 L -1.5 -13 Z" 
+          fill="#fef08a" transform="scale(0.65) translate(0, -18)" />
+  </g>
+
+  <!-- Tropical Island Horizon & Scenic Route Ribbon (Green Curve) -->
+  <path 
+    d="M 16 88 C 36 74, 52 86, 75 78 C 88 74, 98 79, 104 84 C 98 94, 76 96, 60 96 C 40 96, 24 94, 16 88 Z" 
+    fill="url(#bpEmeraldGrad)" 
+    opacity="0.9"
+  />
+
+  <!-- Road / Highway Perspective Line (Airport Transfers & Island Tours) -->
+  <path 
+    d="M 45 96 L 56 81 L 62 81 L 70 96 Z" 
+    fill="#022c22" 
+    opacity="0.75"
+  />
+  <path 
+    d="M 58 95 L 59 83" 
+    stroke="#fde047" 
+    stroke-width="1.5" 
+    stroke-dasharray="2.5 2" 
+    stroke-linecap="round"
+  />
+
+  <!-- Central BP Monogram -->
+  <!-- "B" Lettermark -->
+  <g id="letter-B" transform="translate(26, 38)">
+    <!-- B Stem -->
+    <rect x="0" y="0" width="7" height="34" rx="2" fill="#ffffff" />
+    <!-- B Top Loop -->
+    <path d="M 6 0 L 17 0 C 23 0, 27 4, 27 9 C 27 14, 23 18, 17 18 L 6 18 Z" fill="#ffffff" />
+    <path d="M 7 4 L 16 4 C 19.5 4, 22 6, 22 9 C 22 12, 19.5 14, 16 14 L 7 14 Z" fill="url(#bpBgGrad)" />
+    <!-- B Bottom Loop -->
+    <path d="M 6 16 L 19 16 C 25.5 16, 29.5 20, 29.5 25 C 29.5 30, 25.5 34, 19 34 L 6 34 Z" fill="#ffffff" />
+    <path d="M 7 20 L 18 20 C 21.5 20, 24.5 22, 24.5 25 C 24.5 28, 21.5 30, 18 30 L 7 30 Z" fill="url(#bpBgGrad)" />
+  </g>
+
+  <!-- "P" Lettermark (in Rich Golden Yellow) -->
+  <g id="letter-P" transform="translate(61, 38)">
+    <!-- P Stem -->
+    <rect x="0" y="0" width="7" height="34" rx="2" fill="url(#bpGoldGrad)" />
+    <!-- P Loop -->
+    <path d="M 6 0 L 19 0 C 26 0, 30.5 4.5, 30.5 10 C 30.5 15.5, 26 20, 19 20 L 6 20 Z" fill="url(#bpGoldGrad)" />
+    <path d="M 7 4 L 18 4 C 22 4, 25 6.5, 25 10 C 25 13.5, 22 16, 18 16 L 7 16 Z" fill="url(#bpBgGrad)" />
+  </g>
+
+  <!-- Palm Tree Silhouette Accent (Right side of emblem) -->
+  <g transform="translate(86, 68) scale(0.65)" stroke-linecap="round">
+    <!-- Trunk -->
+    <path d="M 0 20 Q 3 8, -4 -3" fill="none" stroke="#f59e0b" stroke-width="2.2" />
+    <!-- Fronds -->
+    <path d="M -4 -3 Q -14 -12, -18 -6" fill="none" stroke="#6ee7b7" stroke-width="1.8" />
+    <path d="M -4 -3 Q -8 -16, 2 -14" fill="none" stroke="#34d399" stroke-width="1.8" />
+    <path d="M -4 -3 Q 6 -16, 12 -7" fill="none" stroke="#6ee7b7" stroke-width="1.8" />
+    <path d="M -4 -3 Q 8 -5, 14 3" fill="none" stroke="#34d399" stroke-width="1.8" />
+  </g>
+
+  <!-- Bottom Gold Badge Arc: "SRI LANKA" -->
+  <text 
+    x="60" 
+    y="108" 
+    text-anchor="middle" 
+    fill="url(#bpGoldGrad)" 
+    font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" 
+    font-size="7.5" 
+    font-weight="800" 
+    letter-spacing="2.8"
+  >
+    SRI LANKA
+  </text>
+</svg>
