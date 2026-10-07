@@ -1,8 +1,30 @@
 import bpLogo from '../assets/branding/bp_logo.svg';
+
+// Gallery & Guest Real Images
 import touristCarNight from '../assets/gallery/tourist_car_night.jpg';
 import touristDayBackpackers from '../assets/gallery/tourist_day_backpackers.jpg';
 import touristPeaceSign from '../assets/gallery/tourist_peace_sign.jpg';
 import touristYellowTop from '../assets/gallery/tourist_yellow_top.jpg';
+
+// Destination Real Images
+import imgSigiriyaGardens from '../assets/real-imges/sigiriyaa.jpg';
+import imgNineArchViaduct from '../assets/real-imges/nine arch.jpg';
+import imgAdamsPeak from '../assets/real-imges/Adams_Peak_in_Sri_Lanka_1541143843s40.jpg';
+import imgYalaLeopardsTree from '../assets/real-imges/25.jpg';
+import imgGalleFortHeader from '../assets/real-imges/galle-dutch-fort-sri-lanka-header.avif';
+import imgNarangalaCamping from '../assets/real-imges/narangala-camping-a-small.jpg';
+
+// Tour Hero Real Images
+import imgTourMirissaDrone from '../assets/real-imges/mirissa3.jpg';
+import imgTourSigiriyaVertical from '../assets/real-imges/HD-wallpaper-sigiriya-sri-lanka-sri-lanka.jpg';
+import imgTourSecretBeachSunset from '../assets/real-imges/Things-To-Do-Mirissa-Sri-Lanka-secret-beach-sunset.avif';
+import imgTourGalleSunsetStreet from '../assets/real-imges/chathura-indika-LAj-XlHP6Rs-unsplash-2-scaled_20241113111007.jpg';
+
+// Photo Gallery Scenery Real Images
+import imgSigiriyaSummitDrone from '../assets/real-imges/sigiriya-01.webp';
+import imgWeligamaBeachAbove from '../assets/real-imges/Weligama-beach-from-above.jpg';
+import imgGalleFortRamparts from '../assets/real-imges/galle-fort.jpg';
+import imgPolonnaruwaVatadage from '../assets/real-imges/things-to-do-in-Polonnaruwa-1_20241113112120.jpg';
 
 export const INITIAL_BRANDING = {
   name: "BP Tours and Travels",
@@ -29,7 +51,7 @@ export const INITIAL_DESTINATIONS = [
     location: "Matale District, Central Province",
     shortDesc: "UNESCO World Heritage site featuring dramatic 200m lion rock, ancient frescoes, and water gardens.",
     fullDesc: "Sigiriya (Lion Rock) is an ancient fortress built by King Kashyapa in the 5th century. Rising majestically above the jungle, it showcases world-famous frescoes, mirror walls, and incredible 360-degree panorama views of Sri Lanka's emerald forests.",
-    imageUrl: "https://images.unsplash.com/photo-1586861635167-e5223aadc9fe?q=80&w=1200&auto=format&fit=crop",
+    imageUrl: imgSigiriyaGardens,
     rating: 4.9,
     reviewsCount: 182,
     recommendedDays: "1 Day",
@@ -42,7 +64,7 @@ export const INITIAL_DESTINATIONS = [
     location: "Badulla District, Uva Province",
     shortDesc: "Picturesque mountain town famous for scenic train journeys, misty valleys, and iconic colonial bridges.",
     fullDesc: "Ella is Sri Lanka's mountain paradise nestled amongst tea plantations. Marvel at the world-renowned Nine Arch Bridge as blue trains rumble across lush valleys, hike Little Adam's Peak, and refresh at Ravana Falls.",
-    imageUrl: "https://images.unsplash.com/photo-1546708973-b339540b5162?q=80&w=1200&auto=format&fit=crop",
+    imageUrl: imgNineArchViaduct,
     rating: 5.0,
     reviewsCount: 230,
     recommendedDays: "2 Days",
@@ -50,16 +72,16 @@ export const INITIAL_DESTINATIONS = [
   },
   {
     id: "dest-3",
-    name: "Kandy and Sacred Temple of the Tooth",
+    name: "Adam's Peak & Sacred Mountain Pilgrimage",
     category: "Culture",
-    location: "Kandy District, Central Province",
-    shortDesc: "Cultural capital of Sri Lanka hosting the sacred tooth relic of Lord Buddha amidst serene mountain lakes.",
-    fullDesc: "The last royal capital of Sri Lanka, Kandy blends spiritual heritage with natural splendor. Visit Sri Dalada Maligawa (Temple of the Tooth), stroll around Kandy Lake, watch traditional Kandyan dance performances, and explore Peradeniya Botanical Gardens.",
-    imageUrl: "https://images.unsplash.com/photo-1578637387939-43c525550085?q=80&w=1200&auto=format&fit=crop",
+    location: "Sabaragamuwa & Central Province",
+    shortDesc: "Sacred conical mountain summit surrounded by wilderness sanctuaries, misty ridges, and ancient pilgrimage paths.",
+    fullDesc: "The revered summit of Sri Pada (Adam's Peak) towers 2,243 meters above sea level. Famed for its spiritual sanctity, sacred footprint temple, and unforgettable sunrise cloud inversions.",
+    imageUrl: imgAdamsPeak,
     rating: 4.8,
     reviewsCount: 195,
     recommendedDays: "1-2 Days",
-    highlights: ["Temple of the Tooth Relic", "Royal Botanical Gardens", "Kandyan Cultural Show", "Kandy Lake Walk"]
+    highlights: ["Sunrise Cloud Inversion", "Sacred Footprint Sanctuary", "Misty Mountain Ridge Views", "Pilgrimage Trail"]
   },
   {
     id: "dest-4",
@@ -68,7 +90,7 @@ export const INITIAL_DESTINATIONS = [
     location: "Southern and Uva Provinces",
     shortDesc: "World's highest density of leopards, wild elephant herds, sloth bears, and rich avian life.",
     fullDesc: "Embark on an exhilarating 4x4 jeep safari inside Yala National Park. Famous worldwide for its thriving population of Sri Lankan leopards, wild elephants, crocodiles, peacocks, and coastal dune landscapes.",
-    imageUrl: "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?q=80&w=1200&auto=format&fit=crop",
+    imageUrl: imgYalaLeopardsTree,
     rating: 4.9,
     reviewsCount: 160,
     recommendedDays: "1 Day",
@@ -81,7 +103,7 @@ export const INITIAL_DESTINATIONS = [
     location: "Galle, Southern Province",
     shortDesc: "17th-century Dutch colonial walled fort paired with world-class turquoise surfing beaches.",
     fullDesc: "Walk along cobblestone ramparts, boutique cafes, and historic lighthouses inside Galle Dutch Fort. Pair your trip with tropical coconut beaches in Unawatuna, Mirissa, and Weligama for surfing and whale watching.",
-    imageUrl: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=1200&auto=format&fit=crop",
+    imageUrl: imgGalleFortHeader,
     rating: 4.9,
     reviewsCount: 215,
     recommendedDays: "2 Days",
@@ -89,16 +111,16 @@ export const INITIAL_DESTINATIONS = [
   },
   {
     id: "dest-6",
-    name: "Nuwara Eliya Little England",
+    name: "Nuwara Eliya & Narangala Highlands",
     category: "Hill Country",
-    location: "Nuwara Eliya District",
-    shortDesc: "Cool mountain retreat surrounded by rolling Ceylon tea estates, waterfalls, and colonial Tudor architecture.",
-    fullDesc: "Experience Sri Lanka's cool climate in Nuwara Eliya. Taste authentic Ceylon tea at Ceylon Tea Trails, stroll Gregory Lake park, visit Post Office heritage, and marvel at St. Clair's and Devon Waterfalls.",
-    imageUrl: "https://images.unsplash.com/photo-1589308078059-be1415eab4c3?q=80&w=1200&auto=format&fit=crop",
+    location: "Central & Badulla Ridge",
+    shortDesc: "Cool mountain retreat surrounded by rolling Ceylon tea estates, waterfalls, and scenic camping ridges.",
+    fullDesc: "Experience Sri Lanka's cool mountain heights in Nuwara Eliya and Narangala. Stroll tea trails, camp above sea-of-clouds ridges, and enjoy pristine highland air with Bandara.",
+    imageUrl: imgNarangalaCamping,
     rating: 4.7,
     reviewsCount: 140,
     recommendedDays: "1-2 Days",
-    highlights: ["Ceylon Tea Plantation and Factory", "Gregory Lake Boating", "Horton Plains and World's End", "Colonial Post Office"]
+    highlights: ["Ceylon Tea Plantation and Factory", "Mountain Ridge Camping", "Horton Plains and World's End", "Colonial Post Office"]
   }
 ];
 
@@ -113,7 +135,7 @@ export const INITIAL_TOURS = [
     rating: 5.0,
     reviewsCount: 84,
     badge: "Most Popular",
-    heroImage: "https://images.unsplash.com/photo-1546708973-b339540b5162?q=80&w=1200&auto=format&fit=crop",
+    heroImage: imgTourMirissaDrone,
     routes: ["Colombo / BIA", "Sigiriya", "Kandy", "Nuwara Eliya", "Ella", "Yala Safari", "Galle Fort", "BIA Airport"],
     description: "Our signature 7-day tour covers every iconic wonder of Sri Lanka. Experience ancient UNESCO heritage, tea mountain vistas, scenic train rides, wildlife safari, and golden southern beaches in absolute luxury with your dedicated private driver Bandara Premathilaka.",
     itinerary: [
@@ -144,7 +166,7 @@ export const INITIAL_TOURS = [
     rating: 4.9,
     reviewsCount: 62,
     badge: "Best Seller",
-    heroImage: "https://images.unsplash.com/photo-1586861635167-e5223aadc9fe?q=80&w=1200&auto=format&fit=crop",
+    heroImage: imgTourSigiriyaVertical,
     routes: ["BIA Airport", "Sigiriya Rock", "Dambulla", "Kandy", "Nuwara Eliya", "BIA Drop"],
     description: "Perfect for travelers with limited time looking to discover Sri Lanka's spiritual heartland, ancient kingdoms, and breathtaking tea gardens.",
     itinerary: [
@@ -171,7 +193,7 @@ export const INITIAL_TOURS = [
     rating: 4.9,
     reviewsCount: 47,
     badge: "Weekend Special",
-    heroImage: "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?q=80&w=1200&auto=format&fit=crop",
+    heroImage: imgTourSecretBeachSunset,
     routes: ["Colombo / BIA", "Bentota", "Galle Fort", "Mirissa", "Yala Safari", "BIA Drop"],
     description: "Indulge in coastal bliss, watch blue whales in Mirissa, explore 400-year-old colonial fortresses, and spot leopards on an epic Yala safari.",
     itinerary: [
@@ -196,7 +218,7 @@ export const INITIAL_TOURS = [
     rating: 5.0,
     reviewsCount: 91,
     badge: "Day Express",
-    heroImage: "https://images.unsplash.com/photo-1578637387939-43c525550085?q=80&w=1200&auto=format&fit=crop",
+    heroImage: imgTourGalleSunsetStreet,
     routes: ["Colombo / Negombo / BIA", "Dambulla Caves", "Sigiriya Lion Rock", "Return Drop"],
     description: "Full day excursion from Colombo or BIA Airport to climb the 5th-century Sigiriya Fortress and explore ancient cave temples in total comfort.",
     itinerary: [
@@ -285,68 +307,83 @@ export const INITIAL_VEHICLES = [
 
 export const INITIAL_GALLERY = [
   {
-    id: "gal-1",
-    title: "Happy Tourists with Driver Bandara in Van",
-    category: "Tourists and Drivers",
+    id: "gal-scenery-1",
+    title: "Sigiriya Ancient Citadel Summit Ruins",
+    category: "Heritage",
+    location: "Sigiriya",
+    imageUrl: imgSigiriyaSummitDrone,
+    caption: "Spectacular aerial vista of the 5th-century royal fortress citadel and royal pools perched atop the sheer monolithic rock.",
+    isFeatured: true
+  },
+  {
+    id: "gal-scenery-2",
+    title: "Weligama Crescent Bay & Coral Coastline",
+    category: "Coastal",
+    location: "Weligama",
+    imageUrl: imgWeligamaBeachAbove,
+    caption: "High drone perspective of Weligama's turquoise sweep of beach, where gentle waves meet golden sand.",
+    isFeatured: true
+  },
+  {
+    id: "gal-scenery-3",
+    title: "Galle Dutch Fort Historic Ocean Ramparts",
+    category: "Heritage",
+    location: "Galle Fort",
+    imageUrl: imgGalleFortRamparts,
+    caption: "Historic stone bastion walls and bastion walkways looking out across the sparkling Indian Ocean.",
+    isFeatured: true
+  },
+  {
+    id: "gal-scenery-4",
+    title: "Polonnaruwa Vatadage Sacred Relic Chamber",
+    category: "Culture",
+    location: "Polonnaruwa",
+    imageUrl: imgPolonnaruwaVatadage,
+    caption: "Ancient 12th-century circular relic house featuring masterfully preserved guardstones and moonstone carvings.",
+    isFeatured: true
+  }
+];
+
+export const INITIAL_GUEST_SMILES = [
+  {
+    id: "smile-1",
+    guestName: "Emma & Friends",
+    country: "United Kingdom",
+    tripType: "BIA Airport Night Pickup & Tour",
+    title: "Midnight Arrival Ride in Luxury KDH Van",
     imageUrl: touristCarNight,
-    caption: "Memorable night ride with delighted tourists exploring Sri Lanka in comfortable KDH van.",
-    isFeatured: true
+    caption: "Relaxed and happy travelers arriving in Sri Lanka, welcomed personally at BIA airport by Bandara Premathilaka.",
+    date: "Late Night BIA Pickup"
   },
   {
-    id: "gal-2",
-    title: "Backpacker Friends Day Tour Experience",
-    category: "Tourists and Drivers",
+    id: "smile-2",
+    guestName: "Lucas & Backpacker Friends",
+    country: "Germany / Europe",
+    tripType: "Central Highlands Explorer",
+    title: "Sunny Day Island Exploration Tour",
     imageUrl: touristDayBackpackers,
-    caption: "Backpacker guests enjoying a sunny day tour across Kandy and tea trails with Bandara Premathilaka.",
-    isFeatured: true
+    caption: "Backpacker companions enjoying a bright sunny adventure across Kandy, tea estates, and scenic mountain roads.",
+    date: "Highlands Round Tour"
   },
   {
-    id: "gal-3",
-    title: "Peace Sign and Smiles with Guest",
-    category: "Tourists and Drivers",
+    id: "smile-3",
+    guestName: "Jessica & Travel Partner",
+    country: "Australia",
+    tripType: "Custom Private Chauffeur Tour",
+    title: "Peace Signs & Big Smiles with Driver Bandara",
     imageUrl: touristPeaceSign,
-    caption: "Friendly local hospitality! Bandara taking guests on a customized island tour.",
-    isFeatured: true
+    caption: "Genuine local warmth and safe driving! Travelers celebrating another wonderful stop on their island itinerary.",
+    date: "Island Highlights Tour"
   },
   {
-    id: "gal-4",
+    id: "smile-4",
+    guestName: "Sarah M.",
+    country: "Canada",
+    tripType: "7-Day Round Island Journey",
     title: "Warm Sri Lankan Hospitality Tour",
-    category: "Tourists and Drivers",
     imageUrl: touristYellowTop,
-    caption: "Another happy tourist sharing a big smile during their trip across Sri Lanka.",
-    isFeatured: true
-  },
-  {
-    id: "gal-5",
-    title: "Nine Arch Bridge Ella Train Crossing",
-    category: "Destinations",
-    imageUrl: "https://images.unsplash.com/photo-1546708973-b339540b5162?q=80&w=1200&auto=format&fit=crop",
-    caption: "Iconic blue train crossing the Nine Arch Viaduct in Ella.",
-    isFeatured: false
-  },
-  {
-    id: "gal-6",
-    title: "Sigiriya Lion Rock Fortress Aerial View",
-    category: "Destinations",
-    imageUrl: "https://images.unsplash.com/photo-1586861635167-e5223aadc9fe?q=80&w=1200&auto=format&fit=crop",
-    caption: "Rising above the green canopy, ancient 5th century citadel.",
-    isFeatured: false
-  },
-  {
-    id: "gal-7",
-    title: "Yala National Park Wild Leopard",
-    category: "Wildlife",
-    imageUrl: "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?q=80&w=1200&auto=format&fit=crop",
-    caption: "Majestic Sri Lankan leopard resting on rock during Yala 4x4 safari.",
-    isFeatured: false
-  },
-  {
-    id: "gal-8",
-    title: "Mirissa Coconut Tree Hill Sunset",
-    category: "Beaches",
-    imageUrl: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=1200&auto=format&fit=crop",
-    caption: "Palm trees overlooking the Indian Ocean in Southern Sri Lanka.",
-    isFeatured: false
+    caption: "Delighted solo traveler enjoying personalized sightseeing, authentic local restaurant recommendations, and friendly guide care.",
+    date: "Full Island Odyssey"
   }
 ];
 

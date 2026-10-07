@@ -4,6 +4,7 @@ import {
   INITIAL_TOURS, 
   INITIAL_VEHICLES, 
   INITIAL_GALLERY, 
+  INITIAL_GUEST_SMILES,
   INITIAL_REVIEWS, 
   INITIAL_BOOKINGS 
 } from '../data/initialData';
@@ -11,14 +12,15 @@ import { db } from './firebase';
 import { collection, getDocs, doc, setDoc, updateDoc, deleteDoc } from 'firebase/firestore';
 
 const STORAGE_KEYS = {
-  BRANDING: 'bp_tours_branding_v2',
-  DESTINATIONS: 'bp_tours_destinations_v2',
-  TOURS: 'bp_tours_tours_v2',
-  VEHICLES: 'bp_tours_vehicles_v2',
-  GALLERY: 'bp_tours_gallery_v2',
-  REVIEWS: 'bp_tours_reviews_v2',
-  BOOKINGS: 'bp_tours_bookings_v2',
-  NOTIFICATIONS: 'bp_tours_notifications_v2'
+  BRANDING: 'bp_tours_branding_v3',
+  DESTINATIONS: 'bp_tours_destinations_v3',
+  TOURS: 'bp_tours_tours_v3',
+  VEHICLES: 'bp_tours_vehicles_v3',
+  GALLERY: 'bp_tours_gallery_v3',
+  GUEST_SMILES: 'bp_tours_guest_smiles_v3',
+  REVIEWS: 'bp_tours_reviews_v3',
+  BOOKINGS: 'bp_tours_bookings_v3',
+  NOTIFICATIONS: 'bp_tours_notifications_v3'
 };
 
 // Helper to load or initialize local data
@@ -51,6 +53,7 @@ export const DataService = {
       tours: getOrInitStorage(STORAGE_KEYS.TOURS, INITIAL_TOURS),
       vehicles: getOrInitStorage(STORAGE_KEYS.VEHICLES, INITIAL_VEHICLES),
       gallery: getOrInitStorage(STORAGE_KEYS.GALLERY, INITIAL_GALLERY),
+      guestSmiles: getOrInitStorage(STORAGE_KEYS.GUEST_SMILES, INITIAL_GUEST_SMILES),
       reviews: getOrInitStorage(STORAGE_KEYS.REVIEWS, INITIAL_REVIEWS),
       bookings: getOrInitStorage(STORAGE_KEYS.BOOKINGS, INITIAL_BOOKINGS),
       notifications: getOrInitStorage(STORAGE_KEYS.NOTIFICATIONS, [

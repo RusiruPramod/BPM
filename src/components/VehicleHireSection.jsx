@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
 import { Car, Users, Briefcase, Wifi, ShieldCheck, Check, ArrowRight, Plane, Info } from 'lucide-react';
 
+import imgAirportRunway from '../assets/real-imges/images (1).jpg';
+import imgPlaneReflection from '../assets/real-imges/images (2).jpg';
+
 export default function VehicleHireSection() {
   const { vehicles, formatPrice, openBookingModal, branding } = useApp();
 
@@ -108,24 +111,55 @@ export default function VehicleHireSection() {
           ))}
         </div>
 
-        {/* Airport Pick/Drop Banner Callout */}
-        <div className="mt-12 bg-gradient-to-r from-slate-900 via-emerald-950 to-slate-900 rounded-3xl p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl border border-emerald-500/20">
-          <div className="space-y-2 text-center md:text-left">
+        {/* Airport Pick/Drop Banner Callout with Real Airport Images */}
+        <div className="mt-12 bg-gradient-to-r from-slate-900 via-emerald-950 to-slate-900 rounded-3xl p-8 text-white flex flex-col lg:flex-row items-center justify-between gap-8 shadow-xl border border-emerald-500/20">
+          <div className="space-y-3 text-center lg:text-left flex-1">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold">
               <ShieldCheck className="w-4 h-4 text-emerald-400" /> BIA Airport Punctuality Guarantee
             </div>
-            <h3 className="text-2xl font-bold font-serif-heading">Arriving at BIA Airport Colombo?</h3>
-            <p className="text-slate-300 text-sm max-w-xl">
-              Driver Bandara Premathilaka will monitor your flight number and await you at arrivals with a personalized name sign. Zero waiting time!
+            <h3 className="text-2xl sm:text-3xl font-bold font-serif-heading">Arriving at BIA Airport Colombo?</h3>
+            <p className="text-slate-300 text-sm max-w-xl leading-relaxed font-light">
+              Driver Bandara Premathilaka monitors your flight arrival in real-time and awaits you outside arrivals holding a personalized name board. Step straight into an ice-cold, air-conditioned vehicle with chilled bottled water and high-speed Wi-Fi.
             </p>
+            <div className="pt-2">
+              <button
+                onClick={() => openBookingModal({ serviceTitle: "BIA Airport Transfer Pickup / Drop", serviceType: "Airport Pickup / Drop" })}
+                className="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3.5 px-7 rounded-2xl text-sm shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 inline-flex items-center gap-2"
+              >
+                <span>Reserve BIA Airport Transfer</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
           </div>
 
-          <button
-            onClick={() => openBookingModal({ serviceTitle: "BIA Airport Transfer Pickup / Drop", serviceType: "Airport Pickup / Drop" })}
-            className="shrink-0 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3.5 px-7 rounded-2xl text-sm shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5"
-          >
-            Reserve BIA Airport Transfer
-          </button>
+          {/* Dual Airport Image Showcase (Images (1) and (2) at native crisp ~160-180px width) */}
+          <div className="flex items-center gap-4 shrink-0">
+            <div className="w-36 sm:w-44 h-48 rounded-2xl overflow-hidden border border-white/10 shadow-lg relative group bg-slate-950">
+              <img
+                src={imgAirportRunway}
+                alt="Aerial view approaching Bandaranaike International Airport Colombo runway from airplane window"
+                loading="lazy"
+                decoding="async"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-2.5">
+                <span className="text-[10px] font-bold text-emerald-300 leading-tight">BIA Runway Approach</span>
+              </div>
+            </div>
+
+            <div className="w-36 sm:w-44 h-48 rounded-2xl overflow-hidden border border-white/10 shadow-lg relative group bg-slate-950">
+              <img
+                src={imgPlaneReflection}
+                alt="SriLankan Airlines commercial aircraft on BIA airport tarmac with passenger boarding"
+                loading="lazy"
+                decoding="async"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-2.5">
+                <span className="text-[10px] font-bold text-amber-300 leading-tight">24/7 Tarmac Pickup</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

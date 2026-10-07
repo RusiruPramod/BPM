@@ -2,26 +2,35 @@ import React, { useState, useEffect } from 'react';
 import { useApp } from '../context/AppContext';
 import { Calendar, MapPin, Users, Car, ArrowRight, Star, ChevronLeft, ChevronRight, CheckCircle } from 'lucide-react';
 
+import imgSigiriyaGrand from '../assets/real-imges/sigirya.jpeg';
+import imgNineArches from '../assets/real-imges/NineArches.jpg';
+import imgYalaLeopard from '../assets/real-imges/wildlife.webp';
+import imgTaprobaneIsland from '../assets/real-imges/image.webp';
+
 const HERO_SLIDES = [
   {
-    image: "https://images.unsplash.com/photo-1546708973-b339540b5162?q=80&w=1600&auto=format&fit=crop",
-    title: "Discover the Magic of Ella and Nine Arch Bridge",
-    subtitle: "Misty tea mountains, scenic blue train rides, and unforgettable private driver experiences."
-  },
-  {
-    image: "https://images.unsplash.com/photo-1586861635167-e5223aadc9fe?q=80&w=1600&auto=format&fit=crop",
+    image: imgSigiriyaGrand,
     title: "Climb Ancient Sigiriya Lion Rock Fortress",
-    subtitle: "Explore 5th-century palace ruins, royal frescoes, and 360-degree emerald jungle vistas."
+    subtitle: "5th-century royal citadel ruins, iconic lion paw entrance, and panoramic 360-degree jungle views.",
+    alt: "Sigiriya Lion Rock fortress aerial view rising dramatically above green jungle canopy"
   },
   {
-    image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=1600&auto=format&fit=crop",
-    title: "Relax at Mirissa and South Coast Beaches",
-    subtitle: "Golden palm-fringed sands, blue whale watching, and Galle Dutch Fort ramparts."
+    image: imgNineArches,
+    title: "Discover the Magic of Ella & Nine Arch Bridge",
+    subtitle: "Misty tea mountains, the iconic blue railway journey, and scenic highland peaks with your private driver.",
+    alt: "Nine Arch Bridge in Ella with lush tea plantation hills and mountain railway"
   },
   {
-    image: "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?q=80&w=1600&auto=format&fit=crop",
+    image: imgYalaLeopard,
     title: "Thrilling Yala Wildlife Leopard Safari",
-    subtitle: "Witness wild elephants, sloth bears, and Sri Lanka's famed leopards in their natural home."
+    subtitle: "World's highest density of leopards, wild elephant herds, and untamed national parks with private 4x4 jeeps.",
+    alt: "Sri Lankan leopard roaring atop rocky boulder in Yala National Park"
+  },
+  {
+    image: imgTaprobaneIsland,
+    title: "Relax at Weligama & Mirissa Tropical Paradise",
+    subtitle: "Famous Taprobane Island, swaying palms at Coconut Tree Hill, turquoise surf breaks, and fresh seafood.",
+    alt: "Taprobane Island villa in Weligama Bay surrounded by turquoise Indian ocean"
   }
 ];
 
@@ -71,7 +80,9 @@ export default function HeroSection() {
         >
           <img
             src={slide.image}
-            alt={slide.title}
+            alt={slide.alt || slide.title}
+            loading={idx === 0 ? "eager" : "lazy"}
+            decoding="async"
             className="w-full h-full object-cover object-center filter brightness-[0.65]"
           />
         </div>
