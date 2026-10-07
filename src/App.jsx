@@ -45,13 +45,17 @@ function MainLayout() {
         {/* 2. Key Stats & Certifications */}
         <StatsCounter />
 
-        {/* 3. Central Highlands & Ella Waterfall Edge - 1 High-Res Image Banner */}
-        <HighlandSpotlight />
+        {/* 3. Island Travel Moments - Filmstrip Marquee */}
+        <TravelFilmstripMarquee />
+        {/* 11. Guest Smiles - 4 Authentic Happy Guest Photos in 1 Row */}
+        <GuestSmiles />
+        {/* 4. Central Highlands & Ella Waterfall Edge - 1 High-Res Image Banner */}
+        {/* <HighlandSpotlight /> */}
 
-        {/* 4. Destinations Grid - 6 Unique Destination Images */}
+        {/* 5. Destinations Grid - 6 Unique Destination Images */}
         <DestinationsGrid />
 
-        {/* 5. Diyaluma Rock Pools & Waterfall Adventure - 6 Adventure Mosaic Images */}
+        {/* 6. Diyaluma Rock Pools & Waterfall Adventure - 6 Adventure Mosaic Images */}
         <DiyalumaAdventureSection />
 
         {/* 7. Luxury Vehicle Fleet & BIA Airport Transfer - 2 BIA Airport Transfer Images */}
@@ -60,19 +64,15 @@ function MainLayout() {
         {/* 8. Wildlife Safari Expeditions - 4 Wildlife Tracking Images */}
         <WildlifeSafariSection />
 
-        {/* 9. Southern Coastline & Mirissa Bay - 7 Coastal Sunshine Images */}
+        {/* 9. Southern Coastline & Mirissa Bay - Coastal Sunshine Images */}
         <CoastalParadiseSection />
 
         {/* 10. Sri Lanka Photo Gallery - 4 Scenery Images in 1 Row */}
         <PhotoGallery />
 
-        {/* 11. Guest Smiles - 4 Authentic Happy Guest Photos in 1 Row */}
-        <GuestSmiles />
 
-        {/* 12. Island Travel Moments - 7 Filmstrip Marquee Images */}
-        <TravelFilmstripMarquee />
 
-        {/* 13. Customer Reviews & Testimonials */}
+        {/* 12. Customer Reviews & Testimonials */}
         <ReviewSection />
 
         {/* 14. Interactive Location & Island Map */}
