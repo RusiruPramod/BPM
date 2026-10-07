@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useApp } from '../../context/AppContext';
 import { 
-  Phone, MessageCircle, Globe, Shield, ShieldCheck, Menu, X, 
-  Calendar, Search, UserCheck, Lock, ChevronDown, Star, MapPin 
+  Phone, MessageCircle, Globe, Menu, X, 
+  Calendar, Search, UserCheck, Lock, ChevronDown 
 } from 'lucide-react';
 import BrandLogo from './BrandLogo';
 
@@ -54,61 +54,6 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-40 w-full transition-all duration-300">
-      {/* Top Banner Bar - Premium High-Trust Quick Contact Strip */}
-      <div className="bg-slate-950 text-slate-200 text-xs py-2 border-b border-slate-800/80">
-        <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-10 flex flex-wrap justify-between items-center gap-2">
-          
-          {/* Left: 24/7 Availability & Driver Identity */}
-          <div className="flex items-center gap-3">
-            <span className="flex items-center gap-2 text-emerald-400 font-semibold bg-emerald-950/60 px-2.5 py-0.5 rounded-full border border-emerald-800/40">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-              </span>
-              24/7 BIA Airport Pick & Drop
-            </span>
-
-            <span className="hidden sm:inline text-slate-700">•</span>
-
-            <span className="hidden md:inline-flex items-center gap-1.5 text-slate-300">
-              <ShieldCheck className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-              <span>Owner & Driver: <strong className="text-white font-medium">{branding.owner}</strong></span>
-            </span>
-
-            <span className="hidden lg:inline-flex items-center gap-1 text-amber-400 font-bold bg-amber-950/40 border border-amber-800/40 px-2 py-0.5 rounded-full text-[11px]">
-              <Star className="w-3 h-3 fill-amber-400" /> 4.9 ★ (248+ Reviews)
-            </span>
-          </div>
-
-          {/* Right: Tactile Quick-Connect Buttons */}
-          <div className="flex items-center gap-2.5 ml-auto">
-            <a 
-              href={`https://wa.me/${branding.phoneFormattedWhatsapp}`} 
-              target="_blank" 
-              rel="noreferrer"
-              className="inline-flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 bg-emerald-950/50 hover:bg-emerald-900/50 border border-emerald-800/50 px-2.5 py-1 rounded-lg transition-all font-semibold"
-              title="Chat with Bandara on WhatsApp"
-            >
-              <MessageCircle className="w-3.5 h-3.5 text-emerald-400" />
-              <span className="hidden sm:inline">WhatsApp:</span> 
-              <span>{branding.phoneWhatsapp}</span>
-            </a>
-
-            <span className="text-slate-800">|</span>
-
-            <a 
-              href={`tel:${branding.phoneFormattedPrimary}`} 
-              className="inline-flex items-center gap-1.5 text-amber-400 hover:text-amber-300 bg-amber-950/50 hover:bg-amber-900/50 border border-amber-800/50 px-2.5 py-1 rounded-lg transition-all font-semibold"
-              title="Direct Phone Call"
-            >
-              <Phone className="w-3.5 h-3.5 text-amber-400" />
-              <span className="hidden sm:inline">Call:</span> 
-              <span>{branding.phonePrimary}</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
       {/* Main Navbar */}
       <nav className={`w-full transition-all duration-300 ${
         isScrolled 
