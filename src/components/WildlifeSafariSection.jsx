@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
 import { Compass, Sparkles, MapPin, Maximize2, X, ShieldCheck, ArrowRight, Eye } from 'lucide-react';
+import ScrollReveal from './common/ScrollReveal';
 
 import imgLeopardCrossingRoad from '../assets/real-imges/132.jpg';
 import imgLeopardInJungle from '../assets/real-imges/istockphoto-1489566726-612x612.jpg';
@@ -62,90 +63,95 @@ export default function WildlifeSafariSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold uppercase tracking-wider mb-3 border border-amber-500/30">
-            <Eye className="w-3.5 h-3.5 text-amber-400" />
-            <span>Sri Lanka Big Five Wildlife</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold font-serif-heading text-white tracking-tight">
-            Leopard & Wild Elephant Safari Expeditions
-          </h2>
-          <p className="text-stone-300 text-sm sm:text-base mt-3 leading-relaxed font-light">
-            Sri Lanka boasts the highest leopard density on Earth and incredible wild elephant gatherings. Bandara coordinates customized 4x4 open-top safari jeeps with trusted local trackers across Yala, Udawalawe, and Minneriya.
-          </p>
-        </div>
-
-        {/* 4-Card Safari Grid (Sized strictly ~280-340px to keep images 100% sharp and crisp) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {SAFARI_ENCOUNTERS.map((item) => (
-            <div
-              key={item.id}
-              onClick={() => setActiveSafari(item)}
-              className="group bg-stone-900 rounded-3xl overflow-hidden border border-stone-800 shadow-xl hover:shadow-2xl transition-all duration-500 flex flex-col justify-between cursor-pointer transform hover:-translate-y-1"
-            >
-              <div className="relative h-64 overflow-hidden bg-stone-950">
-                <img
-                  src={item.src}
-                  alt={item.alt}
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full h-full object-cover object-center group-hover:scale-106 transition-transform duration-700 ease-out"
-                />
-
-                {/* Badge */}
-                <div className="absolute top-3.5 left-3.5 inline-flex items-center gap-1 px-3 py-1 rounded-full bg-stone-950/75 backdrop-blur-md text-amber-300 text-[10px] font-bold border border-amber-500/30">
-                  <Sparkles className="w-3 h-3 text-amber-400" />
-                  <span>{item.badge}</span>
-                </div>
-
-                {/* Hover prompt */}
-                <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 flex items-end justify-between text-white">
-                  <span className="text-xs font-semibold text-amber-300">Click to view encounter</span>
-                  <Maximize2 className="w-4 h-4 text-white" />
-                </div>
-              </div>
-
-              {/* Card Meta Content */}
-              <div className="p-5 flex-1 flex flex-col justify-between bg-stone-900">
-                <div>
-                  <div className="flex items-center gap-1.5 text-[11px] text-amber-400/90 font-medium mb-1">
-                    <MapPin className="w-3 h-3 shrink-0" />
-                    <span>{item.park}</span>
-                  </div>
-                  <h4 className="font-bold text-white text-sm font-serif-heading leading-snug group-hover:text-amber-300 transition-colors">
-                    {item.title}
-                  </h4>
-                  <p className="text-xs text-stone-300 mt-2 line-clamp-2 font-light leading-relaxed">
-                    {item.caption}
-                  </p>
-                </div>
-
-                <div className="mt-4 pt-3 border-t border-stone-800 flex items-center justify-between text-[11px] text-stone-400">
-                  <span>{item.time}</span>
-                  <span className="text-amber-400 font-bold group-hover:underline">
-                    View
-                  </span>
-                </div>
-              </div>
+        <ScrollReveal direction="up" duration={600}>
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold uppercase tracking-wider mb-3 border border-amber-500/30">
+              <Eye className="w-3.5 h-3.5 text-amber-400" />
+              <span>Sri Lanka Big Five Wildlife</span>
             </div>
+            <h2 className="text-3xl sm:text-4xl font-extrabold font-serif-heading text-white tracking-tight">
+              Leopard & Wild Elephant Safari Expeditions
+            </h2>
+            <p className="text-stone-300 text-sm sm:text-base mt-3 leading-relaxed font-light">
+              Sri Lanka boasts the highest leopard density on Earth and incredible wild elephant gatherings. Bandara coordinates customized 4x4 open-top safari jeeps with trusted local trackers across Yala, Udawalawe, and Minneriya.
+            </p>
+          </div>
+        </ScrollReveal>
+
+        {/* 4-Card Safari Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {SAFARI_ENCOUNTERS.map((item, idx) => (
+            <ScrollReveal key={item.id} delay={idx * 120} duration={600} direction="up" className="h-full">
+              <div
+                onClick={() => setActiveSafari(item)}
+                className="group bg-stone-900 rounded-3xl overflow-hidden border border-stone-800 shadow-xl hover:shadow-2xl transition-all duration-500 flex flex-col justify-between cursor-pointer transform hover:-translate-y-1 h-full"
+              >
+                <div className="relative h-64 overflow-hidden bg-stone-950">
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover object-center group-hover:scale-106 transition-transform duration-700 ease-out"
+                  />
+
+                  {/* Badge */}
+                  <div className="absolute top-3.5 left-3.5 inline-flex items-center gap-1 px-3 py-1 rounded-full bg-stone-950/75 backdrop-blur-md text-amber-300 text-[10px] font-bold border border-amber-500/30">
+                    <Sparkles className="w-3 h-3 text-amber-400" />
+                    <span>{item.badge}</span>
+                  </div>
+
+                  {/* Hover prompt */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 flex items-end justify-between text-white">
+                    <span className="text-xs font-semibold text-amber-300">Click to view encounter</span>
+                    <Maximize2 className="w-4 h-4 text-white" />
+                  </div>
+                </div>
+
+                {/* Card Meta Content */}
+                <div className="p-5 flex-1 flex flex-col justify-between bg-stone-900">
+                  <div>
+                    <div className="flex items-center gap-1.5 text-[11px] text-amber-400/90 font-medium mb-1">
+                      <MapPin className="w-3 h-3 shrink-0" />
+                      <span>{item.park}</span>
+                    </div>
+                    <h4 className="font-bold text-white text-sm font-serif-heading leading-snug group-hover:text-amber-300 transition-colors">
+                      {item.title}
+                    </h4>
+                    <p className="text-xs text-stone-300 mt-2 line-clamp-2 font-light leading-relaxed">
+                      {item.caption}
+                    </p>
+                  </div>
+
+                  <div className="mt-4 pt-3 border-t border-stone-800 flex items-center justify-between text-[11px] text-stone-400">
+                    <span>{item.time}</span>
+                    <span className="text-amber-400 font-bold group-hover:underline">
+                      View
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
           ))}
         </div>
 
         {/* Safari call to action */}
-        <div className="mt-12 bg-gradient-to-r from-amber-950/60 via-stone-900 to-amber-950/60 rounded-3xl p-6 sm:p-8 border border-amber-500/20 text-center max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div className="text-left space-y-1">
-            <span className="text-xs font-bold uppercase tracking-wider text-amber-400">Yala & Udawalawe Private Jeeps</span>
-            <h3 className="text-xl sm:text-2xl font-bold font-serif-heading text-white">Ready for a Real Jungle Safari?</h3>
-            <p className="text-xs sm:text-sm text-stone-300 font-light">Bandara reserves pre-checked 4x4 jeeps with experienced trackers and park entrance permits.</p>
+        <ScrollReveal direction="up" duration={700} delay={150}>
+          <div className="mt-12 bg-gradient-to-r from-amber-950/60 via-stone-900 to-amber-950/60 rounded-3xl p-6 sm:p-8 border border-amber-500/20 text-center max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div className="text-left space-y-1">
+              <span className="text-xs font-bold uppercase tracking-wider text-amber-400">Yala & Udawalawe Private Jeeps</span>
+              <h3 className="text-xl sm:text-2xl font-bold font-serif-heading text-white">Ready for a Real Jungle Safari?</h3>
+              <p className="text-xs sm:text-sm text-stone-300 font-light">Bandara reserves pre-checked 4x4 jeeps with experienced trackers and park entrance permits.</p>
+            </div>
+            <button
+              onClick={() => openBookingModal({ serviceTitle: "Yala National Park Safari Expedition", serviceType: "Wildlife Tour" })}
+              className="shrink-0 bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold py-3 px-6 rounded-2xl text-xs transition-all shadow-lg flex items-center gap-1.5"
+            >
+              <span>Book Safari Tour</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </button>
           </div>
-          <button
-            onClick={() => openBookingModal({ serviceTitle: "Yala National Park Safari Expedition", serviceType: "Wildlife Tour" })}
-            className="shrink-0 bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold py-3 px-6 rounded-2xl text-xs transition-all shadow-lg flex items-center gap-1.5"
-          >
-            <span>Book Safari Tour</span>
-            <ArrowRight className="w-3.5 h-3.5" />
-          </button>
-        </div>
+        </ScrollReveal>
 
       </div>
 

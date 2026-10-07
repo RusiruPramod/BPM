@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
 import { Waves, Sparkles, MapPin, Maximize2, X, Compass, ArrowRight } from 'lucide-react';
+import ScrollReveal from './common/ScrollReveal';
 
 import imgDiyalumaInfinityPool from '../assets/real-imges/images (7).jpg';
 import imgDiyalumaLandscape from '../assets/real-imges/images (8).jpg';
@@ -78,65 +79,68 @@ export default function DiyalumaAdventureSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-500/20 text-teal-300 text-xs font-bold uppercase tracking-wider mb-3 border border-teal-500/30">
-            <Waves className="w-3.5 h-3.5" />
-            <span>Wild Waterfall Expeditions</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold font-serif-heading text-white tracking-tight">
-            Diyaluma Falls & Natural Rock Pool Mosaic
-          </h2>
-          <p className="text-slate-300 text-sm sm:text-base mt-3 leading-relaxed font-light">
-            Sri Lanka’s 2nd highest waterfall features world-famous cliff-top natural infinity pools. Discover this natural adventure safely with your dedicated local guide Bandara Premathilaka.
-          </p>
-        </div>
-
-        {/* 6-Card Mosaic Grid (Card sizes strictly sized ~280-360px wide to preserve crisp native resolution) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {DIYALUMA_ADVENTURE_ITEMS.map((item) => (
-            <div
-              key={item.id}
-              onClick={() => setActivePhoto(item)}
-              className="group relative h-72 sm:h-80 rounded-3xl overflow-hidden bg-slate-800 border border-slate-700/60 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-1"
-            >
-              <img
-                src={item.src}
-                alt={item.alt}
-                loading="lazy"
-                decoding="async"
-                className="w-full h-full object-cover object-center group-hover:scale-106 transition-transform duration-700 ease-out"
-              />
-
-              {/* Gradient for caption readability */}
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/25 to-transparent pointer-events-none" />
-
-              {/* Top Badge */}
-              <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/70 backdrop-blur-md text-teal-300 text-[11px] font-bold border border-teal-500/30 shadow-md">
-                <Sparkles className="w-3 h-3 text-teal-400" />
-                <span>{item.badge}</span>
-              </div>
-
-              {/* Bottom Card Content */}
-              <div className="absolute bottom-4 inset-x-4 text-white">
-                <div className="flex items-center gap-1 text-[11px] text-slate-300 font-medium mb-1">
-                  <MapPin className="w-3 h-3 text-amber-400 shrink-0" />
-                  <span>{item.location}</span>
-                </div>
-                <h4 className="font-bold text-base font-serif-heading leading-snug group-hover:text-teal-300 transition-colors">
-                  {item.title}
-                </h4>
-                <p className="text-xs text-slate-300 mt-1 line-clamp-2 font-light">
-                  {item.caption}
-                </p>
-
-                <div className="mt-3 flex items-center justify-between text-xs font-semibold text-teal-400 border-t border-white/10 pt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="flex items-center gap-1">
-                    <Compass className="w-3 h-3" /> View Natural Size
-                  </span>
-                  <Maximize2 className="w-3.5 h-3.5" />
-                </div>
-              </div>
+        <ScrollReveal direction="up" duration={600}>
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-500/20 text-teal-300 text-xs font-bold uppercase tracking-wider mb-3 border border-teal-500/30">
+              <Waves className="w-3.5 h-3.5" />
+              <span>Wild Waterfall Expeditions</span>
             </div>
+            <h2 className="text-3xl sm:text-4xl font-extrabold font-serif-heading text-white tracking-tight">
+              Diyaluma Falls & Natural Rock Pool Mosaic
+            </h2>
+            <p className="text-slate-300 text-sm sm:text-base mt-3 leading-relaxed font-light">
+              Sri Lanka’s 2nd highest waterfall features world-famous cliff-top natural infinity pools. Discover this natural adventure safely with your dedicated local guide Bandara Premathilaka.
+            </p>
+          </div>
+        </ScrollReveal>
+
+        {/* 6-Card Mosaic Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {DIYALUMA_ADVENTURE_ITEMS.map((item, idx) => (
+            <ScrollReveal key={item.id} delay={idx * 100} duration={600} direction="up" className="h-full">
+              <div
+                onClick={() => setActivePhoto(item)}
+                className="group relative h-72 sm:h-80 rounded-3xl overflow-hidden bg-slate-800 border border-slate-700/60 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-1 h-full"
+              >
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover object-center group-hover:scale-106 transition-transform duration-700 ease-out"
+                />
+
+                {/* Gradient for caption readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/25 to-transparent pointer-events-none" />
+
+                {/* Top Badge */}
+                <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/70 backdrop-blur-md text-teal-300 text-[11px] font-bold border border-teal-500/30 shadow-md">
+                  <Sparkles className="w-3 h-3 text-teal-400" />
+                  <span>{item.badge}</span>
+                </div>
+
+                {/* Bottom Card Content */}
+                <div className="absolute bottom-4 inset-x-4 text-white">
+                  <div className="flex items-center gap-1 text-[11px] text-slate-300 font-medium mb-1">
+                    <MapPin className="w-3 h-3 text-amber-400 shrink-0" />
+                    <span>{item.location}</span>
+                  </div>
+                  <h4 className="font-bold text-base font-serif-heading leading-snug group-hover:text-teal-300 transition-colors">
+                    {item.title}
+                  </h4>
+                  <p className="text-xs text-slate-300 mt-1 line-clamp-2 font-light">
+                    {item.caption}
+                  </p>
+
+                  <div className="mt-3 flex items-center justify-between text-xs font-semibold text-teal-400 border-t border-white/10 pt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="flex items-center gap-1">
+                      <Compass className="w-3 h-3" /> View Natural Size
+                    </span>
+                    <Maximize2 className="w-3.5 h-3.5" />
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
           ))}
         </div>
 

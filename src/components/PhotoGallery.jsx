@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
 import { Camera, X, Maximize2, MapPin, Sparkles, Compass } from 'lucide-react';
+import ScrollReveal from './common/ScrollReveal';
 
 export default function PhotoGallery() {
   const { gallery } = useApp();
@@ -12,63 +13,66 @@ export default function PhotoGallery() {
   return (
     <section id="gallery" className="py-20 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-wider mb-3">
-            <Camera className="w-3.5 h-3.5 text-emerald-600" />
-            <span>Sri Lanka Photo Gallery</span>
+        {/* Section Header with ScrollReveal */}
+        <ScrollReveal direction="up" duration={600}>
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-wider mb-3">
+              <Camera className="w-3.5 h-3.5 text-emerald-600" />
+              <span>Sri Lanka Photo Gallery</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 font-serif-heading tracking-tight">
+              Iconic Landscapes & Ancient Wonders
+            </h2>
+            <p className="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
+              Marvel at Sri Lanka's breathtaking cultural heritage citadel summits, sacred historical relic houses, and sweeping turquoise coastal bays visited on our private chauffeur journeys.
+            </p>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 font-serif-heading tracking-tight">
-            Iconic Landscapes & Ancient Wonders
-          </h2>
-          <p className="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
-            Marvel at Sri Lanka's breathtaking cultural heritage citadel summits, sacred historical relic houses, and sweeping turquoise coastal bays visited on our private chauffeur journeys.
-          </p>
-        </div>
+        </ScrollReveal>
 
-        {/* Gallery Grid - Exactly 4 Images in a Single Row */}
+        {/* Gallery Grid - Exactly 4 Images in a Single Row with Staggered ScrollReveal */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {displayItems.map((item) => (
-            <div
-              key={item.id}
-              onClick={() => setLightboxImage(item)}
-              className="group relative h-80 rounded-3xl overflow-hidden bg-slate-100 cursor-pointer border border-slate-200/80 shadow-sm hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1"
-            >
-              <img
-                src={item.imageUrl}
-                alt={item.title}
-                loading="lazy"
-                decoding="async"
-                className="w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700 ease-out"
-              />
+          {displayItems.map((item, idx) => (
+            <ScrollReveal key={item.id} delay={idx * 120} duration={600} direction="up" className="h-full">
+              <div
+                onClick={() => setLightboxImage(item)}
+                className="group relative h-80 rounded-3xl overflow-hidden bg-slate-100 cursor-pointer border border-slate-200/80 shadow-sm hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 h-full"
+              >
+                <img
+                  src={item.imageUrl}
+                  alt={item.title}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700 ease-out"
+                />
 
-              {/* Location Tag */}
-              {item.location && (
-                <div className="absolute top-4 left-4 z-10 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/65 backdrop-blur-md text-white text-[11px] font-semibold border border-white/10 shadow-sm">
-                  <MapPin className="w-3 h-3 text-amber-400" />
-                  <span>{item.location}</span>
-                </div>
-              )}
+                {/* Location Tag */}
+                {item.location && (
+                  <div className="absolute top-4 left-4 z-10 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/65 backdrop-blur-md text-white text-[11px] font-semibold border border-white/10 shadow-sm">
+                    <MapPin className="w-3 h-3 text-amber-400" />
+                    <span>{item.location}</span>
+                  </div>
+                )}
 
-              {/* Overlay on Hover */}
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-end text-white">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-amber-400">
-                  {item.category || "Sri Lanka Scenery"}
-                </span>
-                <h4 className="font-bold text-base font-serif-heading leading-tight mt-1">
-                  {item.title}
-                </h4>
-                <p className="text-xs text-slate-300 line-clamp-2 mt-1.5 font-light">
-                  {item.caption}
-                </p>
-                <div className="mt-3.5 flex items-center justify-between text-xs font-semibold text-emerald-400 border-t border-white/10 pt-2.5">
-                  <span className="flex items-center gap-1">
-                    <Compass className="w-3.5 h-3.5" /> Explore Full View
+                {/* Overlay on Hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-end text-white">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-amber-400">
+                    {item.category || "Sri Lanka Scenery"}
                   </span>
-                  <Maximize2 className="w-4 h-4" />
+                  <h4 className="font-bold text-base font-serif-heading leading-tight mt-1">
+                    {item.title}
+                  </h4>
+                  <p className="text-xs text-slate-300 line-clamp-2 mt-1.5 font-light">
+                    {item.caption}
+                  </p>
+                  <div className="mt-3.5 flex items-center justify-between text-xs font-semibold text-emerald-400 border-t border-white/10 pt-2.5">
+                    <span className="flex items-center gap-1">
+                      <Compass className="w-3.5 h-3.5" /> Explore Full View
+                    </span>
+                    <Maximize2 className="w-4 h-4" />
+                  </div>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

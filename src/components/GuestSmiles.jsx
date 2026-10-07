@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
 import { Heart, Smile, X, Maximize2, ShieldCheck, MapPin, Star } from 'lucide-react';
+import ScrollReveal from './common/ScrollReveal';
 
+// GuestSmiles - Verified authentic guest photos with private chauffeur Bandara
 export default function GuestSmiles() {
   const { guestSmiles } = useApp();
   const [lightboxSmile, setLightboxSmile] = useState(null);
@@ -15,28 +17,30 @@ export default function GuestSmiles() {
       <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-white to-transparent pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100 text-amber-900 text-xs font-bold uppercase tracking-wider mb-3">
-            <Smile className="w-3.5 h-3.5 text-amber-600" />
-            <span>Guest Smiles & Real Memories</span>
+        {/* Section Header with Scroll Reveal */}
+        <ScrollReveal direction="up" duration={600}>
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100 text-amber-900 text-xs font-bold uppercase tracking-wider mb-3">
+              <Smile className="w-3.5 h-3.5 text-amber-600" />
+              <span>Guest Smiles & Real Memories</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 font-serif-heading tracking-tight">
+              Happy Travelers with Driver Bandara
+            </h2>
+            <p className="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
+              Unfiltered, authentic snapshots of our international guests exploring Sri Lanka with personal chauffeur Bandara Premathilaka. Experience genuine Sri Lankan warmth from the moment you land.
+            </p>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 font-serif-heading tracking-tight">
-            Happy Travelers with Driver Bandara
-          </h2>
-          <p className="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
-            Unfiltered, authentic snapshots of our international guests exploring Sri Lanka with personal chauffeur Bandara Premathilaka. Experience genuine Sri Lankan warmth from the moment you land.
-          </p>
-        </div>
+        </ScrollReveal>
 
         {/* Guest Smiles Grid - Exactly 4 Images in a Single Row */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {displaySmiles.map((smile) => (
-            <div
-              key={smile.id}
-              onClick={() => setLightboxSmile(smile)}
-              className="group bg-white rounded-3xl overflow-hidden border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col justify-between cursor-pointer transform hover:-translate-y-1"
-            >
+          {displaySmiles.map((smile, idx) => (
+            <ScrollReveal key={smile.id} delay={idx * 120} duration={600} direction="up" className="h-full">
+              <div
+                onClick={() => setLightboxSmile(smile)}
+                className="group bg-white rounded-3xl overflow-hidden border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col justify-between cursor-pointer transform hover:-translate-y-1 h-full"
+              >
               <div className="relative h-72 overflow-hidden bg-slate-900">
                 <img
                   src={smile.imageUrl}
@@ -90,7 +94,8 @@ export default function GuestSmiles() {
                 </div>
               </div>
             </div>
-          ))}
+          </ScrollReveal>
+        ))}
         </div>
       </div>
 

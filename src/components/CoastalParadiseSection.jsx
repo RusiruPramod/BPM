@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
 import { Sun, Palmtree, MapPin, Maximize2, X, Compass, Utensils, Music, Waves, ArrowRight } from 'lucide-react';
+import ScrollReveal from './common/ScrollReveal';
 
 import imgWeligamaBayWaves from '../assets/real-imges/weligama (1).jpg';
 import imgMirissaParrotBay from '../assets/real-imges/miriis2.jpg';
@@ -104,117 +105,124 @@ export default function CoastalParadiseSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-100 text-sky-800 text-xs font-bold uppercase tracking-wider mb-3">
-            <Palmtree className="w-3.5 h-3.5 text-sky-600" />
-            <span>Southern Coast Paradise</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 font-serif-heading tracking-tight">
-            Mirissa & Weligama Coastal Sunshine
-          </h2>
-          <p className="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
-            From the coconut-covered promontory of Mirissa to world-famous surf breaks in Weligama, vibrant beachfront dining, and blue whale watching expeditions.
-          </p>
-        </div>
-
-        {/* Featured Panoramic Image (Weligama 1 - 830x330 Medium Resolution) */}
-        <div 
-          onClick={() => setActiveCoastal({
-            src: imgWeligamaBayWaves,
-            title: "Weligama Bay & Taprobane Island Panoramic Coast",
-            location: "Weligama Bay",
-            category: "Panoramic Coastline",
-            caption: "Wide panorama of Weligama's sweeping tropical surf bay with gentle rolling waves breaking along golden sand.",
-            alt: "Wide panoramic view of Taprobane Island and ocean waves at Weligama bay"
-          })}
-          className="mb-8 rounded-3xl overflow-hidden shadow-lg border border-slate-200/90 relative h-60 sm:h-72 cursor-pointer group"
-        >
-          <img
-            src={imgWeligamaBayWaves}
-            alt="Wide panoramic view of Taprobane Island and ocean waves at Weligama bay"
-            loading="lazy"
-            decoding="async"
-            className="w-full h-full object-cover object-center group-hover:scale-103 transition-transform duration-700 ease-out"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent flex flex-col justify-end p-6 sm:p-8 text-white">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-xs font-bold text-sky-200 w-fit mb-2">
-              <Waves className="w-3 h-3" />
-              <span>Panoramic Coastal Sweep</span>
+        <ScrollReveal direction="up" duration={600}>
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-100 text-sky-800 text-xs font-bold uppercase tracking-wider mb-3">
+              <Palmtree className="w-3.5 h-3.5 text-sky-600" />
+              <span>Southern Coast Paradise</span>
             </div>
-            <h3 className="text-xl sm:text-2xl font-bold font-serif-heading text-white">
-              Weligama Bay & Taprobane Island Coastal Panorama
-            </h3>
-            <p className="text-xs sm:text-sm text-slate-200 mt-1 max-w-2xl font-light">
-              Gentle surf breaks, beginner-friendly waves, and tranquil ocean breezes on the southern tip of Sri Lanka.
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 font-serif-heading tracking-tight">
+              Mirissa & Weligama Coastal Sunshine
+            </h2>
+            <p className="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
+              From the coconut-covered promontory of Mirissa to world-famous surf breaks in Weligama, vibrant beachfront dining, and blue whale watching expeditions.
             </p>
           </div>
-        </div>
+        </ScrollReveal>
+
+        {/* Featured Panoramic Image (Weligama 1 - 830x330 Medium Resolution) */}
+        <ScrollReveal direction="up" duration={700}>
+          <div 
+            onClick={() => setActiveCoastal({
+              src: imgWeligamaBayWaves,
+              title: "Weligama Bay & Taprobane Island Panoramic Coast",
+              location: "Weligama Bay",
+              category: "Panoramic Coastline",
+              caption: "Wide panorama of Weligama's sweeping tropical surf bay with gentle rolling waves breaking along golden sand.",
+              alt: "Wide panoramic view of Taprobane Island and ocean waves at Weligama bay"
+            })}
+            className="mb-8 rounded-3xl overflow-hidden shadow-lg border border-slate-200/90 relative h-60 sm:h-72 cursor-pointer group"
+          >
+            <img
+              src={imgWeligamaBayWaves}
+              alt="Wide panoramic view of Taprobane Island and ocean waves at Weligama bay"
+              loading="lazy"
+              decoding="async"
+              className="w-full h-full object-cover object-center group-hover:scale-103 transition-transform duration-700 ease-out"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent flex flex-col justify-end p-6 sm:p-8 text-white">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-xs font-bold text-sky-200 w-fit mb-2">
+                <Waves className="w-3 h-3" />
+                <span>Panoramic Coastal Sweep</span>
+              </div>
+              <h3 className="text-xl sm:text-2xl font-bold font-serif-heading text-white">
+                Weligama Bay & Taprobane Island Coastal Panorama
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-200 mt-1 max-w-2xl font-light">
+                Gentle surf breaks, beginner-friendly waves, and tranquil ocean breezes on the southern tip of Sri Lanka.
+              </p>
+            </div>
+          </div>
+        </ScrollReveal>
 
         {/* 8-Card Grid for coastal gems (All sized comfortably ~260-320px wide) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {COASTAL_ITEMS.map((item) => (
-            <div
-              key={item.id}
-              onClick={() => setActiveCoastal(item)}
-              className="group bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer flex flex-col justify-between transform hover:-translate-y-1"
-            >
-              <div className="relative h-64 overflow-hidden bg-slate-100">
-                <img
-                  src={item.src}
-                  alt={item.alt}
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full h-full object-cover object-center group-hover:scale-106 transition-transform duration-700 ease-out"
-                />
+          {COASTAL_ITEMS.map((item, idx) => (
+            <ScrollReveal key={item.id} delay={(idx % 4) * 100} duration={600} direction="up" className="h-full">
+              <div
+                onClick={() => setActiveCoastal(item)}
+                className="group bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer flex flex-col justify-between transform hover:-translate-y-1 h-full"
+              >
+                <div className="relative h-64 overflow-hidden bg-slate-100">
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover object-center group-hover:scale-106 transition-transform duration-700 ease-out"
+                  />
 
-                {/* Badge */}
-                <div className="absolute top-3.5 left-3.5 inline-flex items-center gap-1 px-3 py-1 rounded-full bg-slate-950/70 backdrop-blur-md text-amber-300 text-[10px] font-bold border border-white/10 shadow-sm">
-                  <span>{item.tag}</span>
-                </div>
-
-                {/* Hover prompt */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 flex items-end justify-between text-white">
-                  <span className="text-xs font-semibold text-amber-300">Click to view photo</span>
-                  <Maximize2 className="w-4 h-4 text-white" />
-                </div>
-              </div>
-
-              {/* Card Meta Content */}
-              <div className="p-5 flex-1 flex flex-col justify-between bg-white">
-                <div>
-                  <div className="flex items-center gap-1.5 text-[11px] text-sky-700 font-semibold mb-1">
-                    <MapPin className="w-3 h-3 text-amber-500 shrink-0" />
-                    <span>{item.location}</span>
+                  {/* Badge */}
+                  <div className="absolute top-3.5 left-3.5 inline-flex items-center gap-1 px-3 py-1 rounded-full bg-slate-950/70 backdrop-blur-md text-amber-300 text-[10px] font-bold border border-white/10 shadow-sm">
+                    <span>{item.tag}</span>
                   </div>
-                  <h4 className="font-bold text-slate-900 text-sm font-serif-heading leading-snug group-hover:text-sky-700 transition-colors">
-                    {item.title}
-                  </h4>
-                  <p className="text-xs text-slate-500 mt-2 line-clamp-2 font-light leading-relaxed">
-                    {item.caption}
-                  </p>
+
+                  {/* Hover prompt */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 flex items-end justify-between text-white">
+                    <span className="text-xs font-semibold text-amber-300">Click to view photo</span>
+                    <Maximize2 className="w-4 h-4 text-white" />
+                  </div>
                 </div>
 
-                <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
-                  <span className="font-medium text-slate-600">{item.category}</span>
-                  <span className="text-sky-600 font-bold group-hover:underline">
-                    View
-                  </span>
+                {/* Card Meta Content */}
+                <div className="p-5 flex-1 flex flex-col justify-between bg-white">
+                  <div>
+                    <div className="flex items-center gap-1.5 text-[11px] text-sky-700 font-semibold mb-1">
+                      <MapPin className="w-3 h-3 text-amber-500 shrink-0" />
+                      <span>{item.location}</span>
+                    </div>
+                    <h4 className="font-bold text-slate-900 text-sm font-serif-heading leading-snug group-hover:text-sky-700 transition-colors">
+                      {item.title}
+                    </h4>
+                    <p className="text-xs text-slate-500 mt-2 line-clamp-2 font-light leading-relaxed">
+                      {item.caption}
+                    </p>
+                  </div>
+
+                  <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
+                    <span className="font-medium text-slate-600">{item.category}</span>
+                    <span className="text-sky-600 font-bold group-hover:underline">
+                      View
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
 
         {/* Action Button */}
-        <div className="mt-12 text-center">
-          <button
-            onClick={() => openBookingModal({ serviceTitle: "Southern Coast & Mirissa Beach Tour", serviceType: "Coastal Tour" })}
-            className="inline-flex items-center gap-2 bg-slate-900 hover:bg-sky-600 text-white font-bold py-3.5 px-7 rounded-2xl text-sm transition-all shadow-md hover:shadow-xl transform hover:-translate-y-0.5"
-          >
-            <span>Book a Southern Coast & Whale Tour</span>
-            <ArrowRight className="w-4 h-4" />
-          </button>
-        </div>
+        <ScrollReveal direction="up" duration={600} delay={150}>
+          <div className="mt-12 text-center">
+            <button
+              onClick={() => openBookingModal({ serviceTitle: "Southern Coast & Mirissa Beach Tour", serviceType: "Coastal Tour" })}
+              className="inline-flex items-center gap-2 bg-slate-900 hover:bg-sky-600 text-white font-bold py-3.5 px-7 rounded-2xl text-sm transition-all shadow-md hover:shadow-xl transform hover:-translate-y-0.5"
+            >
+              <span>Book a Southern Coast & Whale Tour</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
+        </ScrollReveal>
 
       </div>
 

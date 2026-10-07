@@ -1,6 +1,7 @@
 import React from 'react';
 import { useApp } from '../context/AppContext';
 import { Mountain, Compass, Sparkles, ArrowRight, ShieldCheck, Check } from 'lucide-react';
+import ScrollReveal from './common/ScrollReveal';
 import imgEllaGuide13 from '../assets/real-imges/Ella Sri Lanka Guide13.jpg';
 
 export default function HighlandSpotlight() {
@@ -17,36 +18,39 @@ export default function HighlandSpotlight() {
           
           {/* High-Resolution Spotlight Image (4284x5712 natural size) */}
           <div className="lg:col-span-5 relative">
-            <div className="relative mx-auto max-w-md lg:max-w-none rounded-3xl overflow-hidden shadow-2xl border border-white/10 group">
-              <img
-                src={imgEllaGuide13}
-                alt="Traveler sitting on the precipice of Diyaluma waterfall cliff edge in Ella Sri Lanka"
-                loading="lazy"
-                decoding="async"
-                className="w-full h-[520px] sm:h-[600px] object-cover object-center group-hover:scale-104 transition-transform duration-700 ease-out"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none" />
-              
-              {/* Floating verified badge */}
-              <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900/80 backdrop-blur-md text-amber-300 text-xs font-bold border border-amber-500/30 shadow-lg">
-                <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-                <span>Hidden Highland Gems</span>
-              </div>
+            <ScrollReveal direction="right" duration={700}>
+              <div className="relative mx-auto max-w-md lg:max-w-none rounded-3xl overflow-hidden shadow-2xl border border-white/10 group">
+                <img
+                  src={imgEllaGuide13}
+                  alt="Traveler sitting on the precipice of Diyaluma waterfall cliff edge in Ella Sri Lanka"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-[520px] sm:h-[600px] object-cover object-center group-hover:scale-104 transition-transform duration-700 ease-out"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none" />
+                
+                {/* Floating verified badge */}
+                <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900/80 backdrop-blur-md text-amber-300 text-xs font-bold border border-amber-500/30 shadow-lg">
+                  <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+                  <span>Hidden Highland Gems</span>
+                </div>
 
-              {/* Floating caption */}
-              <div className="absolute bottom-5 inset-x-5 text-white">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-400 block">
-                  Diyaluma Falls & Ella Cliff Ridge
-                </span>
-                <p className="text-sm font-medium text-slate-200 mt-1">
-                  "Bandara guided us to the top tier rock pools safely before the crowds arrived. Unbelievable experience!"
-                </p>
+                {/* Floating caption */}
+                <div className="absolute bottom-5 inset-x-5 text-white">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-400 block">
+                    Diyaluma Falls & Ella Cliff Ridge
+                  </span>
+                  <p className="text-sm font-medium text-slate-200 mt-1">
+                    "Bandara guided us to the top tier rock pools safely before the crowds arrived. Unbelievable experience!"
+                  </p>
+                </div>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
 
           {/* Editorial Content & Feature List */}
           <div className="lg:col-span-7 space-y-6">
+            <ScrollReveal direction="left" duration={700} delay={150}>
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold uppercase tracking-wider border border-emerald-500/30">
               <Mountain className="w-3.5 h-3.5" />
               <span>Central Highlands Spotlight</span>
@@ -94,6 +98,7 @@ export default function HighlandSpotlight() {
               </div>
             </div>
 
+            </ScrollReveal>
           </div>
 
         </div>
