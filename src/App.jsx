@@ -7,7 +7,6 @@ import HeroSection from './components/HeroSection';
 import StatsCounter from './components/StatsCounter';
 import HighlandSpotlight from './components/HighlandSpotlight';
 import DestinationsGrid from './components/DestinationsGrid';
-import ToursSection from './components/ToursSection';
 import DiyalumaAdventureSection from './components/DiyalumaAdventureSection';
 import VehicleHireSection from './components/VehicleHireSection';
 import WildlifeSafariSection from './components/WildlifeSafariSection';
@@ -52,10 +51,7 @@ function MainLayout() {
         {/* 4. Destinations Grid - 6 Unique Destination Images */}
         <DestinationsGrid />
 
-        {/* 5. Handcrafted Tours - 4 Unique Tour Hero Images */}
-        <ToursSection />
-
-        {/* 6. Diyaluma Rock Pools & Waterfall Adventure - 6 Adventure Mosaic Images */}
+        {/* 5. Diyaluma Rock Pools & Waterfall Adventure - 6 Adventure Mosaic Images */}
         <DiyalumaAdventureSection />
 
         {/* 7. Luxury Vehicle Fleet & BIA Airport Transfer - 2 BIA Airport Transfer Images */}

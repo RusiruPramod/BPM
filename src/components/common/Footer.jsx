@@ -42,13 +42,13 @@ export default function Footer() {
           <div className="space-y-3">
             <h4 className="font-bold text-white text-sm font-serif-heading uppercase tracking-wider">Quick Links</h4>
             <ul className="space-y-2 text-xs">
-              {['home', 'destinations', 'tours', 'vehicles', 'gallery', 'reviews', 'contact'].map((link) => (
+              {['home', 'destinations', 'vehicles', 'gallery', 'reviews', 'contact'].map((link) => (
                 <li key={link}>
                   <button
                     onClick={() => scrollToSection(link)}
                     className="text-slate-400 hover:text-emerald-400 capitalize transition-colors"
                   >
-                    • {link === 'vehicles' ? 'Vehicles' : link === 'tours' ? 'Tours' : link}
+                    • {link === 'vehicles' ? 'Vehicles' : link}
                   </button>
                 </li>
               ))}

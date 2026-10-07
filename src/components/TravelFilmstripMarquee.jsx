@@ -8,6 +8,8 @@ import imgElephantSigiriyaLake from '../assets/real-imges/images (3).jpg';
 import imgGalleClockTower from '../assets/real-imges/images.jpg';
 import imgGalleLighthouseSunset from '../assets/real-imges/istockphoto-1254219156-612x612.jpg';
 import imgGalleAerialPeninsula from '../assets/real-imges/49.jpg';
+import imgSigiriyaTower from '../assets/real-imges/HD-wallpaper-sigiriya-sri-lanka-sri-lanka.jpg';
+import imgGalleEveningStreet from '../assets/real-imges/chathura-indika-LAj-XlHP6Rs-unsplash-2-scaled_20241113111007.jpg';
 
 const MARQUEE_MOMENTS = [
   {
@@ -72,6 +74,24 @@ const MARQUEE_MOMENTS = [
     tag: "UNESCO Ramparts",
     caption: "Aerial bird's eye view of the entire fortified Dutch peninsula jutting into the Indian Ocean coral reef.",
     alt: "Bird's eye view of Galle Fort peninsula and coral reefs surrounded by ocean"
+  },
+  {
+    id: "filmstrip-8",
+    src: imgSigiriyaTower,
+    title: "Towering Sigiriya Citadel Monolith",
+    location: "Sigiriya Ancient Kingdom",
+    tag: "Citadel Height",
+    caption: "Sheer vertical rock fortress rising 200 meters above the central jungle canopy, home to 5th-century palace ruins.",
+    alt: "Majestic vertical perspective of Sigiriya Lion Rock fortress tower"
+  },
+  {
+    id: "filmstrip-9",
+    src: imgGalleEveningStreet,
+    title: "Cobblestone Twilight in Galle Fort",
+    location: "Galle Dutch Ramparts Street",
+    tag: "Twilight Ambiance",
+    caption: "Charming evening stroll along colonial cobblestone alleys lined with heritage villas, warm street lanterns, and boutique cafes.",
+    alt: "Galle Dutch Fort evening street illuminated with warm lights under twilight sky"
   }
 ];
 

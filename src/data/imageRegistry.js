@@ -374,9 +374,9 @@ export const ALL_49_IMAGES = [
     assignedSection: "Destinations Grid"
   },
 
-  // 20-23: FEATURED TOURS SECTION (4 TOUR HERO COVERS)
+  // 20-21: SOUTHERN COAST EXPANDED SHOWCASE
   {
-    id: "tour-mirissa-drone",
+    id: "coast-mirissa-drone",
     filename: "mirissa3.jpg",
     src: imgMirissaParrotRockTop,
     width: 800,
@@ -384,31 +384,15 @@ export const ALL_49_IMAGES = [
     orientation: "portrait",
     sizeKB: 324,
     qualityTier: "MEDIUM",
-    category: "Round Tour",
+    category: "Coastal",
     location: "Southern Coastline",
-    title: "7-Day Ultimate Island Odyssey",
+    title: "Parrot Rock Coral Headland Aerial",
     description: "Top-down aerial view of Parrot Rock headland jutting into crashing turquoise and white surf.",
     alt: "Top-down drone photography of Parrot Rock and sandy beach isthmus in Mirissa",
-    assignedSection: "Featured Tours Section"
+    assignedSection: "Southern Coast & Beaches Showcase"
   },
   {
-    id: "tour-sigiriya-vertical",
-    filename: "HD-wallpaper-sigiriya-sri-lanka-sri-lanka.jpg",
-    src: imgHDSigiriya,
-    width: 800,
-    height: 1419,
-    orientation: "portrait",
-    sizeKB: 355,
-    qualityTier: "MEDIUM",
-    category: "Cultural & Nature",
-    location: "Cultural Triangle",
-    title: "4-Day Cultural Triangle & Hill Country",
-    description: "Dramatic vertical composition of Sigiriya monolith soaring high into early morning mist.",
-    alt: "Vertical view of Sigiriya Lion Rock fortress tower surrounded by pristine jungle",
-    assignedSection: "Featured Tours Section"
-  },
-  {
-    id: "tour-secret-beach",
+    id: "coast-secret-beach",
     filename: "Things-To-Do-Mirissa-Sri-Lanka-secret-beach-sunset.avif",
     src: imgSecretBeachSunset,
     width: 1080,
@@ -416,15 +400,33 @@ export const ALL_49_IMAGES = [
     orientation: "portrait",
     sizeKB: 191,
     qualityTier: "MEDIUM",
-    category: "Wildlife & Beach",
+    category: "Coastal",
     location: "Mirissa Secret Beach",
-    title: "3-Day Southern Coast & Safari",
+    title: "Secret Beach Hidden Lagoon Sunset",
     description: "Golden hour sunset glowing behind leaning palm trees at secluded Secret Beach Mirissa.",
     alt: "Dramatic golden sunset behind palm trees at Mirissa Secret Beach",
-    assignedSection: "Featured Tours Section"
+    assignedSection: "Southern Coast & Beaches Showcase"
+  },
+
+  // 22-23: ISLAND TRAVEL MOMENTS FILMSTRIP (EXPANDED)
+  {
+    id: "filmstrip-sigiriya-vertical",
+    filename: "HD-wallpaper-sigiriya-sri-lanka-sri-lanka.jpg",
+    src: imgHDSigiriya,
+    width: 800,
+    height: 1419,
+    orientation: "portrait",
+    sizeKB: 355,
+    qualityTier: "MEDIUM",
+    category: "Heritage",
+    location: "Cultural Triangle",
+    title: "Towering Sigiriya Citadel Monolith",
+    description: "Dramatic vertical composition of Sigiriya monolith soaring high into early morning mist.",
+    alt: "Vertical view of Sigiriya Lion Rock fortress tower surrounded by pristine jungle",
+    assignedSection: "Island Travel Moments Filmstrip"
   },
   {
-    id: "tour-galle-sunset",
+    id: "filmstrip-galle-sunset",
     filename: "chathura-indika-LAj-XlHP6Rs-unsplash-2-scaled_20241113111007.jpg",
     src: imgChathuraGalle,
     width: 1200,
@@ -432,12 +434,12 @@ export const ALL_49_IMAGES = [
     orientation: "landscape",
     sizeKB: 92,
     qualityTier: "MEDIUM",
-    category: "Day Tour",
+    category: "Heritage",
     location: "Galle Fort Streets",
-    title: "1-Day Heritage Excursion",
+    title: "Cobblestone Twilight in Galle Fort",
     description: "Atmospheric twilight scene of quaint Galle Fort cobblestone street with glowing cafe lights.",
     alt: "Charming cobblestone street in Galle Fort with warm illuminated cafes and tuk-tuks at dusk",
-    assignedSection: "Featured Tours Section"
+    assignedSection: "Island Travel Moments Filmstrip"
   },
 
   // 24-25: AIRPORT PICKUP & DROP SPECIAL BANNER

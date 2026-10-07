@@ -9,6 +9,8 @@ import imgMirissaHeadlandCoast from '../assets/real-imges/misirra.jpg';
 import imgWeligamaSunsetBoats from '../assets/real-imges/weligma.jpg';
 import imgMirissaNightlife from '../assets/real-imges/Mirissas-exciting-nightlife-experiences-are-full-of-colors-and-cheerful-sounds.jpg';
 import imgMirissaBeachBar from '../assets/real-imges/crowded-view-of-people-and-tables-of-beach-bar-mirissa-sri-lanka-asia-kknc9b.jpg';
+import imgMirissaParrotDrone from '../assets/real-imges/mirissa3.jpg';
+import imgSecretBeachSunset from '../assets/real-imges/Things-To-Do-Mirissa-Sri-Lanka-secret-beach-sunset.avif';
 
 const COASTAL_ITEMS = [
   {
@@ -53,6 +55,26 @@ const COASTAL_ITEMS = [
   },
   {
     id: "coast-5",
+    src: imgMirissaParrotDrone,
+    title: "Parrot Rock Coral Headland Aerial",
+    location: "Parrot Rock, Mirissa",
+    category: "Coastal Panorama",
+    tag: "Coral Lagoon",
+    caption: "High aerial perspective overlooking Parrot Rock and the turquoise reef lagoons of Mirissa Bay.",
+    alt: "High drone aerial view of Parrot Rock and turquoise coral waters in Mirissa"
+  },
+  {
+    id: "coast-6",
+    src: imgSecretBeachSunset,
+    title: "Secret Beach Hidden Lagoon Sunset",
+    location: "Secret Beach, Mirissa",
+    category: "Hidden Cove",
+    tag: "Golden Hour Glow",
+    caption: "Secluded coconut beach cove glowing under warm golden hour sunset rays, sheltered from ocean waves.",
+    alt: "Golden hour sunset over turquoise tidal pools at Secret Beach Mirissa"
+  },
+  {
+    id: "coast-7",
     src: imgMirissaNightlife,
     title: "Vibrant Beachside Nightlife & Music",
     location: "Mirissa Shoreline Strip",
@@ -62,7 +84,7 @@ const COASTAL_ITEMS = [
     alt: "Crowd of tourists celebrating and dancing at illuminated beachfront night venue in Mirissa"
   },
   {
-    id: "coast-6",
+    id: "coast-8",
     src: imgMirissaBeachBar,
     title: "Seafood Dining Directly on the Sand",
     location: "Mirissa Coastline",
@@ -128,8 +150,8 @@ export default function CoastalParadiseSection() {
           </div>
         </div>
 
-        {/* 6-Card Grid for the remaining coastal gems (All sized comfortably ~280-360px wide) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* 8-Card Grid for coastal gems (All sized comfortably ~260-320px wide) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {COASTAL_ITEMS.map((item) => (
             <div
               key={item.id}

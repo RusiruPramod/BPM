@@ -37,7 +37,6 @@ export default function Navbar() {
   const navLinks = [
     { id: 'home', label: 'Home' },
     { id: 'destinations', label: 'Destinations' },
-    { id: 'tours', label: 'Tours' },
     { id: 'vehicles', label: 'Vehicles' },
     { id: 'gallery', label: 'Gallery' },
     { id: 'reviews', label: 'Reviews' },
