@@ -4,6 +4,19 @@
   :root {
     --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     --font-serif: 'Playfair Display', Georgia, Cambria, serif;
+
+    /* Brand Color Design Tokens */
+    --brand-primary: #059669; /* Emerald 600 */
+    --brand-primary-hover: #047857; /* Emerald 700 */
+    --brand-primary-light: #ecfdf5; /* Emerald 50 */
+    --brand-accent: #d97706; /* Amber 600 */
+    --brand-accent-hover: #b45309; /* Amber 700 */
+    --brand-accent-light: #fef3c7; /* Amber 100 */
+
+    /* Glass Navbar Design Tokens */
+    --nav-glass-bg: rgba(255, 255, 255, 0.7);
+    --nav-glass-fallback: rgba(255, 255, 255, 0.95);
+    --nav-glass-border: rgba(0, 0, 0, 0.06);
   }
 
   body {
@@ -14,6 +27,59 @@
     scroll-behavior: smooth;
   }
 }
+
+/* Translucent Glass Navigation with Non-Backdrop Fallback */
+.nav-glass-scrolled {
+  background-color: var(--nav-glass-fallback);
+  border-bottom: 1px solid var(--nav-glass-border);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04);
+}
+
+@supports (backdrop-filter: blur(12px)) or (-webkit-backdrop-filter: blur(12px)) {
+  .nav-glass-scrolled {
+    background-color: var(--nav-glass-bg);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+  }
+}
+
+/* Animated Nav Link Underline (Centered expansion, 200ms) */
+.nav-link-animated {
+  position: relative;
+  letter-spacing: 0.01em;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 200ms ease;
+}
+
+.nav-link-animated::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--brand-primary);
+  border-radius: 9999px;
+  transform: translateX(-50%);
+  transition: width 200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link-animated:hover::after,
+.nav-link-animated[aria-current="page"]::after {
+  width: 100%;
+}
+
+/* Prefers Reduced Motion Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 
 /* Custom Utilities & Animations */
 .font-serif-heading {
